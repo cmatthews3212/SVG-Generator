@@ -130,8 +130,8 @@ dist
 .pnp.*
 
 # Packages
-package.json
-package-lock.json
+./develop/package.json
+./develop/package-lock.json
 .lib/node_modules
 .lib/package.json
 .lib/package-lock.json
