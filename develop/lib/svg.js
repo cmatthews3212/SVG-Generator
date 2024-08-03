@@ -41,12 +41,18 @@ class SVG {
                 this.shapeColor = shapeColor;
             })
             .then(() => {
-
+                if (this.text.length > 3) {
+                 console.error('Please keep your SVG text three characters or below.')
+                 return err
+                }
+            })
+            .then(() => {  
                 if(this.shape === 'Circle') {
                     return writeFile(
                         'test.svg', 
-                        `<svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+                        `<svg width="300" height="300" xmlns="http://www.w3.org/2000/svg">
                         <circle cx="50" cy="50" r="40" fill="${this.shapeColor}" />
+                        <text fill="${this.textColor}" font-size="30" x="21" y="60">${this.text}</text>
                         </svg>`
                     );
                 } else if (this.shape === 'Square') {
@@ -54,6 +60,7 @@ class SVG {
                         'test.svg',
                         `<svg width="300" height="170" xmlns="http://www.w3.org/2000/svg">
                         <rect width="150" height="150" x="10" y="10" style="fill:${this.shapeColor};" />
+                        <text fill="${this.textColor}" font-size="45" x="40" y="100">${this.text}</text>
                         </svg>`
                     );
                 } else if (this.shape === 'Triangle') {
@@ -61,6 +68,7 @@ class SVG {
                         'test.svg',
                         `<svg height="220" width="500" xmlns="http://www.w3.org/2000/svg">
                         <polygon points="100,10 150,190 50,190" style="fill:${this.shapeColor};" />
+                        <text fill="${this.textColor}" font-size="30" x="70" y="165">${this.text}</text>
                         </svg>`
                     );
                 }
