@@ -48,6 +48,7 @@ class SVG {
                 this.textColor = textColor;
                 this.shape = shape;
                 this.shapeColor = shapeColor;
+                  
             })
             .then(() => {
                 if (this.text.length > 3) {
@@ -57,7 +58,7 @@ class SVG {
             })
             .then(() => {
                 return writeFile(
-                    join('test.svg'),  createDocument(this.shape) 
+                    join('test.svg'),  createDocument(this.shape, this.shapeColor, this.text, this.textColor) 
             )
                
             })
