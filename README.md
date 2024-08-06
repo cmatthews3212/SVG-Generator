@@ -9,6 +9,7 @@
 - [Contributors](#contributors)
 - [Testing](#testing)
 - [Contact](#contact-info-for-questions)
+- [Links](#links)
 
 ## Description
 This application demonstrates my ability to use inquirer, classes, and jest testing through building a SVG logo generator. 
