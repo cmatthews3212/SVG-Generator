@@ -5,18 +5,23 @@ const Triangle = require('./triangle.js');
 
 
 
-function createDocument(shape, svg) {
-    const square = new Square().render();
-    const triangle = new Triangle().render();
-    const circle = new Circle(svg.text, svg.shapeColor, svg.textColor).render();
+function createDocument(shape, shapeColor, text, textColor) {
+    // const square = new Square().render();
+    // const triangle = new Triangle().render();
+    // const circle = new Circle().render();
+    let svgShape;
 
     if (shape === 'Circle') {
-        return circle
+        svgShape = new Circle(text, shapeColor, textColor).render()
     } else if (shape === 'Square') {
-        return square;
+        svgShape = new Square(text, shapeColor, textColor).render()
+
     } else if (shape === 'Triangle') {
-        return triangle;
+        svgShape = new Triangle(text, shapeColor, textColor).render()
+
     }
+
+    return svgShape;
 }
 
 

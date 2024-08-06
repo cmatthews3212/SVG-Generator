@@ -1,6 +1,12 @@
 const Shapes = require('./shapes.js');
 
 class Square extends Shapes {
+        constructor(text, shapeColor, textColor) {
+                super();
+                this.text = text;
+                this.shapeColor = shapeColor;
+                this.textColor = textColor;
+            }
     render() {
         
          return `<svg width="300" height="170" xmlns="http://www.w3.org/2000/svg">

@@ -8,11 +8,15 @@ const { createDocument } = require('./svg.js');
 
 
 class SVG {
-    constructor() {
-        this.text = '';
-        this.textColor = '';
-        this.shape = '';
-        this.shapeColor = '';
+    constructor(text, textColor, shape, shapeColor) {
+        this.text = text;
+        this.textColor = textColor;
+        this.shape = shape;
+        this.shapeColor = shapeColor;
+        // this.text = '';
+        // this.textColor = '';
+        // this.shape = '';
+        // this.shapeColor = '';
     }
     // generate() {
     //     console.error('Child class must implement as generate() method.')
@@ -48,6 +52,7 @@ class SVG {
                 this.textColor = textColor;
                 this.shape = shape;
                 this.shapeColor = shapeColor;
+                console.log(`text is ${this.text}`)
                   
             })
             .then(() => {
