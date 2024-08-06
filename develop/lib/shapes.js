@@ -1,5 +1,3 @@
-const SVG = require('./questions.js');
-
 class Shapes {
     constructor(children = []) {
         this.children = children;
