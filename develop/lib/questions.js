@@ -63,12 +63,12 @@ class SVG {
             })
             .then(() => {
                 return writeFile(
-                    join('test.svg'),  createDocument(this.shape, this.shapeColor, this.text, this.textColor) 
+                    join('logo.svg'),  createDocument(this.shape, this.shapeColor, this.text, this.textColor) 
             )
                
             })
             .then(() => {
-                console.log('Created test file!')
+                console.log('Generated logo.svg')
             })
             .catch((err) => {
                 console.log(err) 
